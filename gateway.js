@@ -43,11 +43,9 @@ const USER_SERVICE_URL = process.env.USER_SERVICE_URL;
 
 
 app.use(cors()); 
-// app.use(cors({
-//     origin: 'http://localhost:3000',
-//     credentials: true,
-//     allowedHeaders: ['Content-Type', 'Authorization']
-// }));
+app.use(cors({
+    origin: 'https://my-dashboard-frontend-xcbi.onrender.com' 
+}));
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
