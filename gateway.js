@@ -7,9 +7,8 @@ const axios = require('axios');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const bodyParser = require('body-parser');
-
-
 const rateLimit = require('express-rate-limit');
+const app = express();
 app.set('trust proxy', 1);
 
 const apiLimiter = rateLimit({
@@ -28,7 +27,7 @@ const authLimiter = rateLimit({
 });
 
 
-const app = express();
+
 
 
 
